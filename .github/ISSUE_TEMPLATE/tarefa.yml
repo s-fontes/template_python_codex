@@ -1,0 +1,66 @@
+name: Tarefa de desenvolvimento
+description: Definir uma tarefa verificável para um ciclo de desenvolvimento.
+body:
+  - type: dropdown
+    id: tipo
+    attributes:
+      label: Tipo
+      options:
+        - Funcionalidade
+        - Correção
+        - Documentação
+        - Infraestrutura
+    validations:
+      required: true
+  - type: textarea
+    id: objetivo
+    attributes:
+      label: Objetivo e contexto
+      description: Qual problema será resolvido e para quem?
+    validations:
+      required: true
+  - type: textarea
+    id: comportamento
+    attributes:
+      label: Comportamento esperado e exemplos
+      description: Inclua entradas, saídas e, para defeitos, reprodução e resultado atual.
+    validations:
+      required: true
+  - type: textarea
+    id: escopo
+    attributes:
+      label: Escopo e dependências
+      description: Indique restrições, interfaces afetadas e outras tarefas necessárias.
+    validations:
+      required: true
+  - type: textarea
+    id: aceite
+    attributes:
+      label: Critérios de aceite
+      description: Liste resultados verificáveis e casos de erro relevantes.
+    validations:
+      required: true
+  - type: textarea
+    id: validacao
+    attributes:
+      label: Testes, documentação e entrega
+      description: Indique validações e documentos afetados; informe se exige deploy e qual o destino, sem credenciais.
+    validations:
+      required: true
+  - type: textarea
+    id: caminhos
+    attributes:
+      label: Caminhos permitidos
+      description: Um caminho ou padrão por linha (exemplo src/python_template/**). O Codex deve respeitar o escopo descrito nesta issue.
+    validations:
+      required: true
+  - type: input
+    id: dependencias
+    attributes:
+      label: Dependências
+      description: Issues necessárias e seu estado conhecido, ou Nenhuma. Indique pendências sem presumir conclusão.
+  - type: input
+    id: ciclo
+    attributes:
+      label: Ciclo e prioridade sugeridos
+      description: Registre na issue.
